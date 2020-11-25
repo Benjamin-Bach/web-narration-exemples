@@ -219,3 +219,76 @@ html#grille_simple{
 }
 
 
+
+/* 4_vertical_scroll.html */
+
+html#vertical_scroll{
+
+  body{
+    transition: all 1s;
+    &.chapter1{
+      background-color: bisque;
+    }
+    &.chapter2{
+      background-color: lightpink;
+    }
+    &.chapter3{
+      background-color: aqua;
+    }
+
+  }
+
+  main{
+    height: 100vh;
+    overflow: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+  }
+
+  section{
+    scroll-snap-align: start;
+  }
+
+  #chapter2 article{
+    p{
+      transition: all 1s;
+      transform: scale(0);
+    }
+    &.visible p{
+      transform: scale(1);
+    }
+  }
+
+  #chapter3{
+    position: relative;
+    .sidebar{
+      background-color: $primaryColor;
+      position: absolute;
+      top: 0;
+      right: $marge / 2;
+      width: 50%;
+      transition: all 1s;
+      transform: translateX(100%);
+      color: white;
+      b{
+        color: white;
+      }
+      &.open{
+        transform: translateX(0);
+      }
+      .button{
+        position: absolute;
+        background-color: $primaryColor;
+        width: $marge * 2;
+        height: $marge * 2;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%) translateX(-48px);
+        border-radius: 50%;
+        cursor: pointer;
+      }
+    }
+  }
+
+}
+

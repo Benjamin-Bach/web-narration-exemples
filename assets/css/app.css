@@ -190,4 +190,64 @@ html#grille_simple #chapter3 .sidebar .button {
 html#grille_simple #chapter5 {
   margin-left: 100vw;
 }
+
+/* 4_vertical_scroll.html */
+html#vertical_scroll body {
+  transition: all 1s;
+}
+html#vertical_scroll body.chapter1 {
+  background-color: bisque;
+}
+html#vertical_scroll body.chapter2 {
+  background-color: lightpink;
+}
+html#vertical_scroll body.chapter3 {
+  background-color: aqua;
+}
+html#vertical_scroll main {
+  height: 100vh;
+  overflow: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+html#vertical_scroll section {
+  scroll-snap-align: start;
+}
+html#vertical_scroll #chapter2 article p {
+  transition: all 1s;
+  transform: scale(0);
+}
+html#vertical_scroll #chapter2 article.visible p {
+  transform: scale(1);
+}
+html#vertical_scroll #chapter3 {
+  position: relative;
+}
+html#vertical_scroll #chapter3 .sidebar {
+  background-color: darkcyan;
+  position: absolute;
+  top: 0;
+  right: 16px;
+  width: 50%;
+  transition: all 1s;
+  transform: translateX(100%);
+  color: white;
+}
+html#vertical_scroll #chapter3 .sidebar b {
+  color: white;
+}
+html#vertical_scroll #chapter3 .sidebar.open {
+  transform: translateX(0);
+}
+html#vertical_scroll #chapter3 .sidebar .button {
+  position: absolute;
+  background-color: darkcyan;
+  width: 64px;
+  height: 64px;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%) translateX(-48px);
+  border-radius: 50%;
+  cursor: pointer;
+}
 /*# sourceMappingURL=app.css.map */
