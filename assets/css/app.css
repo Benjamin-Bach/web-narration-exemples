@@ -250,4 +250,58 @@ html#vertical_scroll #chapter3 .sidebar .button {
   border-radius: 50%;
   cursor: pointer;
 }
+
+/* 5_horizontal_scroll.html */
+html#horizontal_scroll {
+  /*
+    main{
+      height: 100vh;
+      overflow: auto;
+      scroll-behavior: smooth;
+      scroll-snap-type: y mandatory;
+    }
+
+    section{
+      scroll-snap-align: start;
+    }
+    */
+}
+html#horizontal_scroll body {
+  transition: all 1s;
+}
+html#horizontal_scroll body.chapter1 {
+  background-color: bisque;
+}
+html#horizontal_scroll body.chapter2 {
+  background-color: lightpink;
+}
+html#horizontal_scroll body.chapter3 {
+  background-color: aqua;
+}
+html#horizontal_scroll main {
+  border: 1px solid red;
+  transform: rotate(-90deg) translateY(-600px);
+  transform-origin: right top;
+  height: 900px;
+  width: 600px;
+  overflow-y: auto;
+}
+html#horizontal_scroll main section {
+  height: 900px;
+  width: 900px;
+  border: 1px solid black;
+  transform: rotate(90deg) translateX(900px);
+  transform-origin: right top;
+}
+html#horizontal_scroll main article {
+  height: 600px;
+  width: 900px;
+}
+html#horizontal_scroll #chapter2 article p {
+  transition: all 1s;
+  transform: scale(0);
+}
+html#horizontal_scroll #chapter2 article.visible p {
+  transform: scale(1);
+}
 /*# sourceMappingURL=app.css.map */
