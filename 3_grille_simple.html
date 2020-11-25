@@ -1,0 +1,90 @@
+<html  id="grille_simple">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Benjamin Bach | Web Narration</title>
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/app.css">
+</head>
+
+<body>
+
+
+<nav>
+  <ul>
+    <li><a href="#chapter1">Intro</a></li>
+    <li><a href="#chapter2">Chapitre 2</a></li>
+    <li><a href="#chapter3">Chapitre 3</a></li>
+    <li><a href="#chapter4">Chapitre 4</a></li>
+    <li><a href="#chapter5">Chapitre 5</a></li>
+  </ul>
+</nav>
+
+<section id="chapter1">
+  <article>
+    <p>
+      Cet exemple montre un défilement simple et horizontal.<br>
+      Une balise article correspondant à un écran grace à la propriété <b>height:100vh;</b> en css.<br>
+      La nav regroupe des liens utilisant les ids des sections pour se positionner au bon endroit.<br>
+      Le défilement progressif du scroll est obtenu avec la propriété <b>scroll-behavior:smooth;</b><br>
+    </p>
+    <p>
+      Pour obtenir ce rendu horizontal, il suffit d'appliquer la propriété <b>display:flex;</b> sur le body, de lui donner une largeur correspondant à celle de tous écrans, <b>width:300vw;</b> (puisqu'on à 3 écrans dans cet exemple) et enfin de faire en sorte que chaque article ait la largeur d'un écran avec <b>width:100vw;</b>.
+    </p>
+    <p>
+      Il est aussi possible de créer des <a href="#chapter2">liens</a> directement à l'interieur des pages.
+    </p>
+  </article>
+</section>
+
+<section id="chapter2">
+  <article>
+    <p>
+      Grâce à la navigation par ancres, nous disposons du pseudo selecteurs css <b>:target</b> qui est actif uniquement sur les sections ciblées, c'est à dire sur lesquelles ont vient de cliquer.<br>
+      Nous pouvons ainsi facilement déclencer des animations ou des transitions au moment de l'affichage d'une section, et ce, sans la moindre ligne de javascript.
+    </p>
+  </article>
+</section>
+
+<section id="chapter3">
+  <article>
+    <p>
+      Grâce au script <b>toggleClass.js</b>, nous pouvons ajouter ou retirer une classe css à n'importe quel élément en cliquant sur un autre (ou le même).<br>
+      Ce qui peut nous permettre de gérer des animations / transitions sur un élément en fonction de son état (avec ou sans la classe).
+    </p>
+    <p>Cliquez sur la languette en bas.</p>
+  </article>
+  <article class="sidebar">
+    <div class="button" data-target=".sidebar"></div>
+    <p>
+      Pour utiliser ce script, il suffit de créer un attribut <b>data-target</b> sur l'élément déclencheur (celui sur lequel on clique), puis de lui donner une valeur correspondante au selecteur CSS de l'élément auquel on souhaite ajouter (ou retirer) la classe <b>open</b>.
+    </p>
+    <p>
+      Exemple :<br>
+      La languette surlaquelle vous avez cliqué à l'attribut <b>data-target=".sidebar"</b>.
+    </p>
+  </article>
+</section>
+
+<section id="chapter4">
+  <article>
+    <p>
+      Tout en conservant un body avec une largeur de <b>300vw</b> mais en lui ajoutant la propriété <b>flex-wrap:wrap;</b>, vous pouvez rajouter des écrans supplémentaires et constituer ainsi une grille.
+    </p>
+  </article>
+</section>
+
+<section id="chapter5">
+  <article>
+    <p>
+      En utilisant la propriété margin, par exemple ici <b>margin-left:100vw;</b>, vous pouvez positionner encore plus précisèment vos écrans.
+    </p>
+    <a href="#chapter3">Aller au chapitre 3, juste au dessus.<a>
+  </article>
+</section>
+
+
+<script src="assets/js/toggleClass.js" charset="utf-8"></script>
+</body>
+</html>
