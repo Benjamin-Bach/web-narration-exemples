@@ -291,7 +291,7 @@ html#horizontal_scroll #chapter2 article.visible p {
   transform: scale(1);
 }
 
-/* 4_vertical_sanimate_fixed.html */
+/* 6_vertical_sanimate_fixed.html */
 html#vertical_animate_fixed main {
   height: 100vh;
   overflow: auto;
@@ -374,5 +374,67 @@ html#vertical_animate_fixed .chapter4 .matrice div:nth-child(9) {
 }
 html#vertical_animate_fixed .chapter4 .matrice div {
   opacity: 1;
+}
+
+/* 7_vertical_sanimate_svg.html */
+html#vertical_animate_svg svg {
+  width: 100%;
+  height: 100vh;
+  background-color: #00f1f1;
+  position: absolute;
+  z-index: 0;
+  transition: all 2s;
+}
+html#vertical_animate_svg svg circle {
+  transition: all 0.5s;
+  transform-origin: center;
+  fill: transparent;
+  stroke: white;
+  stroke-width: 2px;
+}
+html#vertical_animate_svg svg #myCircle1 {
+  stroke-dasharray: 1000px;
+  stroke-dashoffset: 1000px;
+}
+html#vertical_animate_svg svg #myCircle2 {
+  stroke-dasharray: 660px;
+  stroke-dashoffset: 0;
+}
+html#vertical_animate_svg .chapter2 svg {
+  background-color: #00bebe;
+}
+html#vertical_animate_svg .chapter2 svg #myCircle1 {
+  stroke-dashoffset: 666px;
+}
+html#vertical_animate_svg .chapter2 svg #myCircle2 {
+  stroke-dashoffset: 220px;
+}
+html#vertical_animate_svg .chapter3 svg {
+  background-color: #005858;
+}
+html#vertical_animate_svg .chapter3 svg #myCircle1 {
+  stroke-dashoffset: 333px;
+}
+html#vertical_animate_svg .chapter3 svg #myCircle2 {
+  stroke-dashoffset: 440px;
+}
+html#vertical_animate_svg .chapter4 svg {
+  background-color: #002525;
+}
+html#vertical_animate_svg .chapter4 svg #myCircle1 {
+  stroke-dashoffset: 0px;
+}
+html#vertical_animate_svg .chapter4 svg #myCircle2 {
+  stroke-dashoffset: 660px;
+}
+html#vertical_animate_svg main {
+  position: relative;
+  height: 100vh;
+  overflow: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+html#vertical_animate_svg section {
+  scroll-snap-align: start;
 }
 /*# sourceMappingURL=app.css.map */
