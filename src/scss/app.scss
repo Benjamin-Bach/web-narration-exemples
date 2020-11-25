@@ -93,3 +93,62 @@ html#vertical_simple{
 
 }
 
+/* 2_horizontal_simple.html */
+
+html#horizontal_simple{
+
+  overflow: hidden;
+  scroll-behavior: smooth;
+
+  body{
+    display: flex;
+    width: 300vw;
+  }
+
+  section{
+    width: 100vw;
+  }
+
+  #chapter2 article p{
+    transition: all 1s;
+    transform: scale(0);
+  }
+
+  #chapter2:target article p{
+    transform: scale(1);
+  }
+
+  #chapter3{
+    position: relative;
+    .sidebar{
+      background-color: $primaryColor;
+      position: absolute;
+      top: calc( 50% - #{$marge} / 2);
+      width: 100%;
+      height: 50%;
+      transition: all 1s;
+      transform: translateY(100%);
+      color: white;
+      b{
+        color: white;
+      }
+      &.open{
+        transform: translateY(0);
+      }
+      .button{
+        position: absolute;
+        background-color: $primaryColor;
+        width: $marge * 2;
+        height: $marge * 2;
+        left: 50%;
+        top: 0;
+        transform: translateY(-48px) translateX(-50%);
+        border-radius: 50%;
+        cursor: pointer;
+      }
+    }
+  }
+
+}
+
+
