@@ -520,4 +520,17 @@ html#vertical_animate_svg{
 
 }
 
+/* 8_vertical_skrollr.html */
+
+html#vertical_skrollr{
+  overflow-x: hidden;
+  #chapter4{
+    display: flex;
+    width: 400vw;
+    article{
+      width: 20%;
+    }
+  }
+}
+
 

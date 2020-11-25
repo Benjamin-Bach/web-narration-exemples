@@ -437,4 +437,16 @@ html#vertical_animate_svg main {
 html#vertical_animate_svg section {
   scroll-snap-align: start;
 }
+
+/* 8_vertical_skrollr.html */
+html#vertical_skrollr {
+  overflow-x: hidden;
+}
+html#vertical_skrollr #chapter4 {
+  display: flex;
+  width: 400vw;
+}
+html#vertical_skrollr #chapter4 article {
+  width: 20%;
+}
 /*# sourceMappingURL=app.css.map */
