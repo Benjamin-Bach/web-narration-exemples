@@ -335,10 +335,23 @@ html#horizontal_scroll{
   }
 
 
+  #chapter2 article{
+    p{
+      transition: all 1s;
+      transform: scale(0);
+    }
+    &.visible p{
+      transform: scale(1);
+    }
+  }
+
+}
+
+/* 4_vertical_sanimate_fixed.html */
+
+html#vertical_animate_fixed{
 
 
-
-/*
   main{
     height: 100vh;
     overflow: auto;
@@ -349,17 +362,98 @@ html#horizontal_scroll{
   section{
     scroll-snap-align: start;
   }
-  */
 
-  #chapter2 article{
-    p{
-      transition: all 1s;
-      transform: scale(0);
-    }
-    &.visible p{
-      transform: scale(1);
+  .matrice{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-wrap: wrap;
+    width: $marge * 6;
+    transform: skew(0deg, 20deg) scale(1.5);
+    transform-origin: bottom right;
+    div{
+      background-color: $primaryColor;
+      border: 1px solid white;
+      width: $marge * 2;
+      height: $marge * 2;
+      transition: all .3s;
+      transform: translate(0, 0);
+      opacity: .3;
+      &:nth-child(1){
+        transform: translate(-55vw, -55vh);
+      }
+      &:nth-child(2){
+        transform: translate(0, -55vh);
+      }
+      &:nth-child(3){
+        transform: translate(55vw, -55vh);
+      }
+      &:nth-child(4){
+        transform: translate(-55vw, 0);
+        transition-delay: .3s;
+      }
+      &:nth-child(5){
+        transform: translate(0, 0);
+      }
+      &:nth-child(6){
+        transform: translate(55vw, 0);
+        transition-delay: .3s;
+      }
+      &:nth-child(7){
+        transform: translate(-55vw, 55vh);
+        transition-delay: .3s;
+      }
+      &:nth-child(8){
+        transform: translate(0, 55vh);
+        transition-delay: .6s;
+      }
+      &:nth-child(9){
+        transform: translate(55vw, 55vh);
+        transition-delay: .6s;
+      }
     }
   }
+
+
+  .chapter2, .chapter3, .chapter4{
+    .matrice{
+      div:nth-child(1),
+      div:nth-child(6),
+      div:nth-child(8){
+        transform: translate(0, 0);
+      }
+    }
+  }
+
+  .chapter3, .chapter4{
+    .matrice{
+      div:nth-child(3),
+      div:nth-child(7){
+        transform: translate(0, 0);
+      }
+    }
+  }
+
+  .chapter4{
+    .matrice{
+      div:nth-child(2),
+      div:nth-child(4),
+      div:nth-child(9){
+        transform: translate(0, 0);
+      }
+      div{
+        opacity: 1;
+      }
+    }
+  }
+
+
+
+
+
+
 
 
 }
