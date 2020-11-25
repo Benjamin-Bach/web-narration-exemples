@@ -1,0 +1,95 @@
+/* Styles commun à tous les exemples */
+
+$primaryColor: darkcyan;
+$secondaryColor: grey;
+$marge: 32px;
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  font-size: 14px;
+  line-height: 1.2;
+  color: $secondaryColor
+}
+
+b{
+  font-weight: bold;
+  color: $primaryColor;
+}
+
+a{
+  color: darken($primaryColor, 50%);
+  &:hover{
+    color: $primaryColor;
+  }
+}
+
+nav{
+  background-color: lighten($primaryColor, 65%);
+  position: fixed;
+  z-index: 999;
+  top: $marge;
+  right: $marge;
+  padding: $marge / 2;
+}
+
+article{
+  height: 100vh;
+  border: $marge / 2 solid $primaryColor;
+  padding: $marge;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+/* 1_vertical_simple.html */
+
+html#vertical_simple{
+
+  overflow: hidden;
+  scroll-behavior: smooth;
+
+  #chapter2 article p{
+    transition: all 1s;
+    transform: scale(0);
+  }
+
+  #chapter2:target article p{
+    transform: scale(1);
+  }
+
+  #chapter3{
+    position: relative;
+    .sidebar{
+      background-color: $primaryColor;
+      position: absolute;
+      top: 0;
+      right: $marge / 2;
+      width: 50%;
+      transition: all 1s;
+      transform: translateX(100%);
+      color: white;
+      b{
+        color: white;
+      }
+      &.open{
+        transform: translateX(0);
+      }
+      .button{
+        position: absolute;
+        background-color: $primaryColor;
+        width: $marge * 2;
+        height: $marge * 2;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%) translateX(-48px);
+        border-radius: 50%;
+        cursor: pointer;
+      }
+    }
+  }
+
+}
+

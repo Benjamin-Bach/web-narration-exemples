@@ -1,0 +1,85 @@
+@charset "UTF-8";
+/* Styles commun à tous les exemples */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+  line-height: 1.2;
+  color: grey;
+}
+
+b {
+  font-weight: bold;
+  color: darkcyan;
+}
+
+a {
+  color: black;
+}
+a:hover {
+  color: darkcyan;
+}
+
+nav {
+  background-color: #d8ffff;
+  position: fixed;
+  z-index: 999;
+  top: 32px;
+  right: 32px;
+  padding: 16px;
+}
+
+article {
+  height: 100vh;
+  border: 16px solid darkcyan;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+/* 1_vertical_simple.html */
+html#vertical_simple {
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+html#vertical_simple #chapter2 article p {
+  transition: all 1s;
+  transform: scale(0);
+}
+html#vertical_simple #chapter2:target article p {
+  transform: scale(1);
+}
+html#vertical_simple #chapter3 {
+  position: relative;
+}
+html#vertical_simple #chapter3 .sidebar {
+  background-color: darkcyan;
+  position: absolute;
+  top: 0;
+  right: 16px;
+  width: 50%;
+  transition: all 1s;
+  transform: translateX(100%);
+  color: white;
+}
+html#vertical_simple #chapter3 .sidebar b {
+  color: white;
+}
+html#vertical_simple #chapter3 .sidebar.open {
+  transform: translateX(0);
+}
+html#vertical_simple #chapter3 .sidebar .button {
+  position: absolute;
+  background-color: darkcyan;
+  width: 64px;
+  height: 64px;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%) translateX(-48px);
+  border-radius: 50%;
+  cursor: pointer;
+}
+/*# sourceMappingURL=app.css.map */
