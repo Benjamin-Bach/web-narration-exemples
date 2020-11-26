@@ -533,4 +533,16 @@ html#vertical_skrollr{
   }
 }
 
+/* 5_vhorizontal_scroll_js.html */
+
+html#horizontal_scroll_js{
+
+  .horizontal-scroll{
+    display: flex;
+    scroll-behavior: smooth;
+    > *{
+      min-width: 100vw;
+    }
+  }
+}
 
