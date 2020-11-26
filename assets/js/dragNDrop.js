@@ -3,12 +3,12 @@ var startY = 0;
 var page = document.querySelector('html')
 
 function dragstart_handler(ev) {
-  startX = ev.screenX + page.scrollLeft
-  startY = ev.screenY + page.scrollTop
-  var crt = ev.target.cloneNode(true);
+  startX = ev.screenX + page.scrollLeft;
+  startY = ev.screenY + page.scrollTop;
+  let crt = ev.target.cloneNode(true);
   crt.style.display = "none";
   document.body.appendChild(crt);
-  ev.dataTransfer.setDragImage(crt, 0, 0)
+  ev.dataTransfer.setDragImage(crt, 0, 0);
 }
 
 function dragover_handler(ev){
