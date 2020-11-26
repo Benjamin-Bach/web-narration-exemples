@@ -450,12 +450,25 @@ html#vertical_skrollr #chapter4 article {
   width: 20%;
 }
 
-/* 5_vhorizontal_scroll_js.html */
+/* 5_horizontal_scroll_js.html */
 html#horizontal_scroll_js .horizontal-scroll {
   display: flex;
   scroll-behavior: smooth;
 }
 html#horizontal_scroll_js .horizontal-scroll > * {
   min-width: 100vw;
+}
+
+/* 9_grille_dragndrop.html */
+html#grille_dragndrop {
+  overflow: hidden;
+}
+html#grille_dragndrop [draggable] {
+  width: 300vw;
+  display: flex;
+  flex-wrap: wrap;
+}
+html#grille_dragndrop [draggable] > * {
+  width: 100vw;
 }
 /*# sourceMappingURL=app.css.map */

@@ -533,7 +533,7 @@ html#vertical_skrollr{
   }
 }
 
-/* 5_vhorizontal_scroll_js.html */
+/* 5_horizontal_scroll_js.html */
 
 html#horizontal_scroll_js{
 
@@ -546,3 +546,18 @@ html#horizontal_scroll_js{
   }
 }
 
+
+/* 9_grille_dragndrop.html */
+
+html#grille_dragndrop{
+  overflow: hidden;
+//  scroll-behavior: auto;
+  [draggable]{
+    width: 300vw;
+    display: flex;
+    flex-wrap: wrap;
+    > *{
+      width: 100vw;
+    }
+  }
+}
