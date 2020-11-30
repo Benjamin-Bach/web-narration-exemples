@@ -17,6 +17,9 @@ function callback(entries, observer){
     if(entry.intersectionRatio > .5){
       target.classList.add('visible')
       body.classList.add(target.parentNode.id)
+      if(target.querySelector('audio[data-play="auto"]') !== null){
+        target.querySelector('audio[data-play="auto"]').play()
+      }
     }else{
       target.classList.remove('visible')
       body.classList.remove(target.parentNode.id)

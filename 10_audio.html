@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html  id="audio">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Benjamin Bach | Web Narration</title>
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/app.css">
+</head>
+
+<body>
+
+<main>
+
+
+<section id="chapter1">
+  <article>
+    <p>Une démo simple d'un player audio html5</p>
+    <audio controls>
+      <source src="/assets/medias/chevre.ogg" type="audio/ogg">
+      <source src="/assets/medias/chevre.mp3" type="audio/mpeg">
+    </audio>
+    <p>Le format mp3 est reconnu par tous les navigateurs modernes, cependant, le format ogg est encore plus léger mais lui n'est pas actuellement reconnu par Safari. <br>
+      Il est reccomandé d'utiliser les deux afin de maximiser les performances grâce à ogg et de servir du mp3 pour safari.<br>
+      La balise <b>audio</b> peut ainsi contenir plusieurs <b>source</b> pointant sur plusieurs formats différents. C'est le premier compatible qui sera lu.<br>
+      L'attribut <b>controls</b> sur la balise <b>audio</b> sert à afficher le player.
+    </p>
+  </article>
+</section>
+
+<section id="chapter2">
+  <article>
+    <p>
+      Dans cette page, une balise <b>audio</b> mais sans l'attribut <b>controls</b>.<br>
+      Pour activer le son, du javascript sera donc necessaire. On peut imaginer soit de le déclencher depuis un clic sur un autre élèment, soit le déclencher automatiquement lorsque la page est affichée grâce au script <b>IntersectionObserver.js</b>, puisque ce script nous permet de faire ce qu'on veut à l'ouverture d'une page.
+    </p>
+
+    <audio data-play="auto" id="coq">
+      <source src="/assets/medias/coq.ogg" type="audio/ogg">
+      <source src="/assets/medias/coq.mp3" type="audio/mpeg">
+    </audio>
+
+    <p>ATTENTION : Depuis quelques temps déjà, les navigateurs comme chrome ou firefox bloquent la lecture automatique des sons.<br>
+      L'utilisateur devra soit manuellement activer les permissions et dans ce cas il faudra lui indiquer par un message, soit cliquer intentionellement sur un premier player ou bouton de lancement pour appliquer tacitement les permissions.
+    </p>
+
+    <p>Ici des boutons pour controler un son :<br>
+      <b><a href="javascript:document.querySelector('#coq').play();">PLAY</a></b><br>
+      <b><a href="javascript:document.querySelector('#coq').pause();">PAUSE</a></b><br>
+    </p>
+
+  </article>
+</section>
+
+<section id="chapter3">
+  <article>
+    <p>Pour aller beaucoup plus loin, vous pouvez essayer ce script : <br>
+    <a href="https://howlerjs.com/" target="_blank">howler.js</a></p>
+  </article>
+</section>
+
+</main>
+
+<script src="assets/js/toggleClass.js" charset="utf-8"></script>
+<script src="assets/js/IntersectionObserver.js" charset="utf-8"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

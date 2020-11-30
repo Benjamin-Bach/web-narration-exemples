@@ -471,4 +471,15 @@ html#grille_dragndrop [draggable] {
 html#grille_dragndrop [draggable] > * {
   width: 100vw;
 }
+
+/* 4_vertical_scroll.html */
+html#audio main {
+  height: 100vh;
+  overflow: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+html#audio section {
+  scroll-snap-align: start;
+}
 /*# sourceMappingURL=app.css.map */
