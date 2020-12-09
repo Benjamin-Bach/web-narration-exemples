@@ -537,12 +537,12 @@ html#vertical_skrollr{
 
 html#horizontal_scroll_js{
 
-  
+
   scroll-behavior: smooth;
   *{
     scroll-behavior: smooth;
   }
-  
+
 
   main{
     //height: 100vh;
@@ -560,6 +560,29 @@ html#horizontal_scroll_js{
       min-width: 100vw;
     }
   }
+}
+
+/* 5_horizontal_scroll_js_2.html */
+
+html#horizontal_scroll_js_2{
+
+
+  scroll-behavior: smooth;
+  overflow: hidden;
+
+
+  .horizontal-scroll{
+     display: flex;
+     width: 300%;
+     > div{
+       scroll-behavior: smooth;
+       width: 100%;
+       height: 100vh;
+       overflow: auto;
+
+     }
+  }
+
 }
 
 

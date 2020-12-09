@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html  id="horizontal_scroll_js_2">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Benjamin Bach | Web Narration</title>
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/app.css">
+  <script>
+    function scrollHorizontal(){
+      console.log('wheel')
+    }
+  </script>
+</head>
+
+<body>
+
+
+<nav>
+  <ul>
+    <li><a href="#chapter1">Home</a></li>
+    <li><a href="#chapter2">Chapitre 2</a></li>
+    <li><a href="#chapter3">Chapitre 3</a></li>
+    <li><a href="#chapter4">Chapitre 4</a></li>
+  </ul>
+</nav>
+
+<main>
+
+  <section id="chapter1">
+    <article>
+      <p>1</p>
+    </article>
+  </section>
+
+  <section class="horizontal-scroll">
+
+    <div id="chapter2">
+      <article>
+        <p>2</p>
+        <a href="#chapter-2-next">Next</a>
+      </article>
+      <article id="chapter-2-next">La suite ici...</article>
+      <article>Puis là...</article>
+    </div>
+
+    <div id="chapter3">
+      <article>
+        <p>3</p>
+      </article>
+      <article>La suite ici...</article>
+    </div>
+
+    <div id="chapter4">
+      <article>
+        <p>4</p>
+      </article>
+      <article>La suite ici...</article>
+    </div>
+
+  </section>
+
+
+</main>
+
+<script src="assets/js/IntersectionObserver_scrollH.js" charset="utf-8"></script>
+
+</body>
+</html>
