@@ -451,6 +451,12 @@ html#vertical_skrollr #chapter4 article {
 }
 
 /* 5_horizontal_scroll_js.html */
+html#horizontal_scroll_js {
+  scroll-behavior: smooth;
+}
+html#horizontal_scroll_js * {
+  scroll-behavior: smooth;
+}
 html#horizontal_scroll_js .horizontal-scroll {
   display: flex;
   scroll-behavior: smooth;

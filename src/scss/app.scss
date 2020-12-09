@@ -537,7 +537,23 @@ html#vertical_skrollr{
 
 html#horizontal_scroll_js{
 
+  
+  scroll-behavior: smooth;
+  *{
+    scroll-behavior: smooth;
+  }
+  
+
+  main{
+    //height: 100vh;
+    //overflow: auto;
+    //scroll-behavior: smooth;
+    //scroll-snap-type: y mandatory;
+  }
+
+
   .horizontal-scroll{
+   // scroll-snap-align: start;
     display: flex;
     scroll-behavior: smooth;
     > *{
